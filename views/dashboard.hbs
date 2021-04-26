@@ -1,0 +1,40 @@
+{{#if stories}}
+<p>Here are your stories</p>
+<div class="row">
+  {{#each stories}}
+  <div class="col s12 m10 story">
+    <div class="card  darken-1">
+      <div class="card-content black-text card-text">
+        <span class="card-title title-date">
+          <h4>{{title}}</h4>
+          <div>
+            <i class="fas {{ternary status 'public'  'fa-users' 'fa-user' }}" style="margin-right: 10px;"></i>
+            <span class="formatDate">{{formatDate createdAt 'MMM Do YYYY, h:mm a'}}</span>
+          </div>
+        </span>
+        <p>{{truncate (stripTags body) 170}}</p>
+      </div>
+      <div class="card-action card-custom">
+        <a href="/stories/{{_id}}" class="btn grey">Continue Reading</a>
+        <span>
+          <a href="/stories/edit/{{_id}}" class="btn btn-float btn-custom">
+            <i class="fas fa-edit"></i>
+          </a>
+
+          <form action="/stories/{{_id}}" method="post" id="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn red btn-custom">
+              <i class="fas fa-trash"></i>
+            </button>
+          </form>
+        </span>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+{{else}}
+<p id="noStories">Hey {{givePropVal user
+  'displayName'}}! Start creating the stories</p>
+{{/if}}

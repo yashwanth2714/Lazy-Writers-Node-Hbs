@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Story Books</title>
+</head>
+
+<body>
+    {{> _header user=./user}}
+    {{> _add_btn}}
+    {{!-- Renders the template at the specified viewPath as the body within the layout specified by the defaultLayout or
+    options.layout --}}
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.0/ckeditor.js"
+        integrity="sha512-bNMnTgKRxN1n+5rgfcf160HT2koHRcwLcSq/3JDOY9R65mja48E4Hh+a+IQXVaY2NoJCVC+pr0qE3Vz194QwnA=="
+        crossorigin="anonymous"></script>
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        // this will intitalize the sidenav
+        M.FormSelect.init(document.querySelector('#status'))
+
+        // 1 - textarea name
+        let editor = CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link, editorplaceholder, format, font, colorbutton, justify, notification',
+            editorplaceholder: 'Start typing here...',
+
+        })
+
+        CKEDITOR.config.notification_duration = 2000;
+        editor.on('required', function (evt) {
+            editor.showNotification('This field is required.', 'info');
+            evt.cancel();
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    {{!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> --}}
+    <script src="/publicApp.js"></script>
+    <script>
+        $(".imageUpload").on('click', function (e) {
+            e.preventDefault();
+            $("#fileInput:hidden").trigger('click');
+        });
+
+        $("#fileInput").on("change", () => {
+            if ($("#fileInput").val() != "") {
+                console.log("changed");
+                $("#profileForm").submit();
+            }
+        })
+    </script>
+</body>
+
+</html>

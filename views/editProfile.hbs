@@ -1,0 +1,72 @@
+<div class="row" style="margin-top: 25px;">
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="row center-align" style="padding-top: 10px;">
+                <form action="/profile/{{user._id}}/avatar" method="POST" id="profileForm"
+                    enctype="multipart/form-data">
+                    <img src="{{user.image}}" class="circle responsive-img img-small profileImage">
+                    <a href="#" class="btn btn-float btn-custom imageUpload">
+                        <i class="fas fa-camera cameraIcon"></i>
+                    </a>
+                    <input type="file" name="avatar" id="fileInput" style="display: none;" accept="image/*"
+                        onclick="this.value=null;" onchange="Filevalidation()">
+                </form>
+            </div>
+            <div class="row" style="padding:20px">
+                <form class="col s12" action="/profile/{{user._id}}" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="firstName" type="text" class="validate" value="{{user.firstName}}"
+                                name="firstName" required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="lastName" type="text" class="validate" value="{{user.lastName}}" name="lastName">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="displayName" type="text" class="validate" value="{{user.displayName}}"
+                                name="displayName" required>
+                            <label for="displayName">Display Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="about" style="font-size:1.0rem !important;padding-left:12px">About</label>
+                        <div class="input-field col s12">
+                            <textarea id="body" name="description">{{user.description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="card-action center-align">
+                        <button class="btn blue">Save</button>
+                        <a href="/profile" class="btn orange">Cancel</a>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    Filevalidation = () => {
+        const fi = document.getElementById('fileInput');
+
+        // Check if any file is selected. 
+        if (fi.files.length > 0) {
+            for (let i = 0; i <= fi.files.length - 1; i++) {
+
+                const fsize = fi.files.item(i).size;
+                const file = Math.round((fsize / 1024));
+                // The size of the file. 
+                if (file >= 2048) {
+
+                    return alert(
+                        "File is too big, please select a file less than 2mb");
+                }
+            }
+        }
+    }
+</script>

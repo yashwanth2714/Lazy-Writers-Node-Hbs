@@ -1,0 +1,29 @@
+<div class="row custom-card" style="margin-top: 25px;">
+    {{#each stories}}   
+        <div>
+            <div class="card">
+                <div class="card-image">
+                    {{!-- todo: editIcon 
+                        1 : story.user 2: global user variable 3: storyId
+                        If we want to parse html using hbs, we use triple braces--}}
+                    {{{editIcon user ../user _id}}}
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    {{!-- it will truncate first and then strip the result of it --}}
+                    <p>{{truncate (stripTags body) 70}}</p>
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="">
+                        <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                        <a href="/stories/{{_id}}" class="btn grey">Read More</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <p>No stories to display</p>
+    {{/each}}
+</div>
