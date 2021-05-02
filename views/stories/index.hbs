@@ -14,7 +14,7 @@
                     <p>{{truncate (stripTags body) 70}}</p>
                     <br>
                     <div class="chip">
-                        <img src="{{user.image}}" alt="">
+                        <img src="{{user.image}}" onerror="this.src='/assets/m1.jpg'">
                         <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
                     </div>
                 </div>

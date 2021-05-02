@@ -27,7 +27,7 @@
                     <p>{{stripTags (givePropVal user 'description')}}</p>
                 </div>
 
-                <form action="/profile/{{givePropVal user '_id'}}" method="post" id="delete-form">
+                <form action="/profile/{{givePropVal user '_id'}}" method="post" id="delete-form" onsubmit="return deleteProfile()">
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn red btn-custom" style="float: right;">Delete Profile
                     </button>
@@ -36,3 +36,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    deleteProfile = () => {
+        return confirm("Are you sure you want to delete your account? This action cannot be undone.");
+    }
+</script>
