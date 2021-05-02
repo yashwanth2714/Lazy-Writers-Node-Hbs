@@ -1,21 +1,27 @@
 body {
-    background-color: #f5f5f5;
+  background-color: #485461;
+  background-image: linear-gradient(271deg, #485461 0%, #28313b 50%);
+  color: white !important;
+}
+
+* {
+  color: white !important;
 }
 
 .login-container {
-    text-align: center;
-    width: 400px;
-    margin-top: 170px;
-    padding: 10px;
+  text-align: center;
+  width: 400px;
+  margin-top: 0px;
+  padding: 10px;
 }
 
 p {
-    margin: 10px 0 !important;
-    white-space: pre-line;
+  margin: 10px 0 !important;
+  white-space: pre-line;
 }
 
 .fa-small {
-    font-size: 16px !important;
+  font-size: 16px !important;
 }
 
 /* .btn-float {
@@ -24,58 +30,88 @@ p {
 } */
 
 .img-small {
-    width: 180px
+  width: 180px;
 }
 
 #main {
-    background-color: #4c4c4c;
-    /* background-image: url('/assets/book4.jpg') ;
+  /* background-color: #4c4c4c;
+    background-image: url('/assets/book4.jpg') ;
    background-repeat: no-repeat;
    background-size: 100% 150%; */
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(10deg, #355c7d, #6c5b7b, #c06c84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #485461;
+  /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+}
+
+/* Card */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    height: 50%;
+    margin: 0 auto 0 auto;
+    padding: 0 1.5rem 2rem;
+    color: #fafafa;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 4px;
+    box-shadow: inset 0 0rem 2rem rgb(255 255 255 / 20%), 0 0 0 1px rgb(255 255 255 / 10%), 0.3rem 1.2rem 3rem rgb(255 255 255 / 20%);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background-color: transparent !important;
 }
 
 .btn-custom {
-    padding: 0px 7px !important;
-    line-height: 34px !important;
+  padding: 0px 7px !important;
+  line-height: 34px !important;
 }
 
 .card-text {
-    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 21px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    letter-spacing: -0.063px;
-    line-height: 32px;
-    text-decoration: none solid rgb(41, 41, 41);
-    text-align: start;
-    text-indent: 0px;
-    text-transform: none;
-    vertical-align: baseline;
-    white-space: normal;
-    word-spacing: 0px;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: -0.063px;
+  line-height: 32px;
+  text-decoration: none solid rgb(41, 41, 41);
+  text-align: start;
+  text-indent: 0px;
+  text-transform: none;
+  vertical-align: baseline;
+  white-space: normal;
+  word-spacing: 0px;
 }
 
 .formatDate {
-    font-family: Cambria, "Times New Roman", Times, serif;
-    font-size: 14px;
+  font-family: Cambria, "Times New Roman", Times, serif;
+  font-size: 14px;
 }
 
 .title-date {
-    display: flex !important;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .card-custom {
-    display: flex !important;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 form#delete-form {
-    float: right;
-    margin-left: 10px;
+  float: right;
+  margin-left: 10px;
 }
 
 /* .story:nth-child(even) {
@@ -83,81 +119,160 @@ form#delete-form {
 } */
 
 .tabActive {
-    background-color: sandybrown;
+  background-color: sandybrown;
 }
 
 a.navBtn:hover {
-    background-color: rgb(180, 179, 179);
+  background-color: rgb(180, 179, 179);
 }
 
 h4 {
-    font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 #mobileProfile {
-    background: none !important;
+  background: none !important;
 }
 
-
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 5px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
 
-    /* Position the tooltip */
-    /* position: absolute; */
-    z-index: 1;
+  /* Position the tooltip */
+  /* position: absolute; */
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+  visibility: visible;
 }
 
 .profileImage {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .profileImage:hover {
-    opacity: 0.5;
-    transition: .5s ease;
+  opacity: 0.5;
+  transition: 0.5s ease;
 }
 
 .imageUpload {
-    position: absolute;
-    top: 10%;
-    left: 49%;
+  position: absolute;
+  top: 10%;
+  left: 49%;
 }
 
 .imageUpload:hover {
-    box-shadow: 1px 1px 10px 5px black;
-    transition: .5s ease;
+  box-shadow: 1px 1px 10px 5px black;
+  transition: 0.5s ease;
 }
 
 /* mobile layout */
 
 #nav-mobile {
-    width: 250px !important;
-    background-color: #424242 !important
+  width: 250px !important;
+  background-color: #424242 !important;
 }
 
-#nav-mobile li>a {
-    color: white;
+#nav-mobile li > a {
+  color: white;
 }
 
 #noStories {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  align-items: center;
 }
 
 .custom-card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-auto-rows: minmax(143px, auto); */
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-auto-rows: minmax(143px, auto); */
+  grid-gap: 1rem;
 }
+
+.login-btn {
+  background: #f857a6 !important;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff5858, #f857a6) !important;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff5858, #f857a6) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.custom-add {
+  background: #EB3349 !important;
+    background: -webkit-linear-gradient(to right, #F45C43, #EB3349) !important;
+    background: linear-gradient(192deg, #F45C43, #EB3349) !important;
+}
+
+.dashboard-card {
+  position: relative;
+    margin: .5rem 0 1rem 0;
+    background-color: #6f6c6c;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 40px;
+    -webkit-backdrop-filter: blur(50px);
+    background: -webkit-linear-gradient(238deg, #E7E9BB, #403B4A) !important;
+    background: linear-gradient( 238deg, #848480, #403B4A) !important;
+    /* background-image: linear-gradient(
+309deg
+,#ff8a00,#e52e71) !important; */
+}
+
+.dashboard-card:hover {
+  box-shadow: inset 0 0rem 2rem rgb(255 255 255 / 20%), 0 0 0 1px rgb(255 255 255 / 10%), 0.3rem 1.2rem 3rem rgb(255 255 255 / 20%);
+  background: linear-gradient( 137deg, #848480, #a19ea7) !important;
+  box-shadow: 0 0 15px 0 tomato,0 0 15px 0 tomato!important;
+  transition: .5s ease-in-out;
+}
+
+.card-content {
+  color: white !important;
+}
+
+.custom-card-story, .index-card , .card-action a.btn.grey{
+  box-shadow: inset 0 0rem 2rem rgb(255 255 255 / 20%), 0 0 0 1px rgb(255 255 255 / 10%), inset 0.3rem 1.2rem 13rem rgb(255 255 255 / 20%);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  background-color: transparent !important;
+}
+
+.card.index-card:hover {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0rem 2rem rgb(255 255 255 / 20%), 0 0 0 1px rgb(255 255 255 / 10%), 0.3rem 1.2rem 13rem rgb(255 255 255 / 20%);
+}
+
+.card-action a.btn.grey:hover {
+  background-color: rgba(255, 255, 255, .8) !important;
+  color: #28313b !important;
+}
+
+.index-card {
+  height: 310px;
+}
+
+.cke_combo_text {
+  color: #484848 !important;
+}
+
+@media only screen and (max-device-width : 730px) {
+  /* Styles */
+    .custom-card {
+      display: block;
+    }
+
+    .index-card {
+      height: 300px;
+    }
+    
+  }
+  
+
+
