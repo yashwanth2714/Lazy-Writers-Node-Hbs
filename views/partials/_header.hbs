@@ -20,7 +20,7 @@
           <div class="background">
             <img src="/assets/m1.jpg" style="max-height: 100%;">
           </div>
-          <a href="#user"><img class="circle" src="{{givePropVal ./user 'image'}}"></a>
+          <a href="#user"><img class="circle" src="{{givePropVal ./user 'image'}}" onerror="this.src='/assets/t1.jpg'"></a>
           <a href="#name"><span class="white-text name">{{givePropVal ./user 'displayName'}}</span></a>
           <a href="/profile" id="mobileProfile"><span class="white-text email">View Profile</span></a>
         </div>
