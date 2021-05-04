@@ -274,7 +274,7 @@ h4 {
 
 @media only screen and (max-device-width: 1350px) {
   .index-card {
-    height: 350px;
+    height: 320px;
   }
 }
 
@@ -285,7 +285,7 @@ h4 {
   }
 
   .index-card {
-    height: 300px;
+    height: 280px;
   }
 }
 

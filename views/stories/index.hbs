@@ -11,7 +11,7 @@
                 <div class="card-content center-align">
                     <h5>{{truncate (stripTags title) 70}}</h5>
                     {{!-- it will truncate first and then strip the result of it --}}
-                    <p>{{truncate (stripTags body) 70}}</p>
+                    <h6>{{truncate (stripTags body) 70}}</h6>
                     <br>
                     <div class="chip">
                         <img src="{{user.image}}" onerror="this.src='/assets/m1.jpg'">
