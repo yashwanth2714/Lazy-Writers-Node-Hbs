@@ -6,7 +6,7 @@
     <div class="card  darken-1 dashboard-card">
       <div class="card-content black-text card-text">
         <span class="card-title title-date">
-          <h4>{{title}}</h4>
+          <h4>{{truncate (stripTags title) 120}}</h4>
           <div>
             <i class="fas {{ternary status 'public'  'fa-users' 'fa-user' }}" style="margin-right: 10px;"></i>
             <span class="formatDate">{{formatDate createdAt 'MMM Do YYYY, h:mm a'}}</span>
