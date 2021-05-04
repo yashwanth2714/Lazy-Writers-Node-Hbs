@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-image">
                 <img src="{{givePropVal user 'image'}}" class="circle" onerror="this.src='/assets/m1.jpg'">
-                <span class="card-title" style="position: relative !important;color:black;top:10px">{{givePropVal user
+                <span class="card-title" style="position: relative !important;color:white;top:10px">{{givePropVal user
                     'displayName'}}</span>
                 <a href="/profile/edit/{{givePropVal user '_id'}}"
                     class="btn-floating halfway-fab waves-effect waves-light blue" style="bottom: 20px;"><i
@@ -13,17 +13,17 @@
             <div class="card-content">
                 <div style="display: flex;justify-content: space-between;flex-direction: row;">
                     <span>
-                        <label for="public" style="font-size:1.0rem !important;">Private Stories</label>
+                        <label for="public" style="font-size:1.0rem !important;color:white;">Private Stories</label>
                         <span>{{privateStories}}</span>
                     </span>
                     <span>
-                        <label for="private" style="font-size:1.0rem !important;">Public Stories</label>
+                        <label for="private" style="font-size:1.0rem !important;color:white;">Public Stories</label>
                         <span>{{publicStories}}</span>
                     </span>
                 </div>
                 <br>
                 <div>
-                    <label for="about" style="font-size:1.0rem !important;">About</label>
+                    <label for="about" style="font-size:1.0rem !important;color:white;">About</label>
                     <p>{{stripTags (givePropVal user 'description')}}</p>
                 </div>
 
