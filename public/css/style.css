@@ -170,7 +170,7 @@ h4 {
 
 #nav-mobile {
   width: 250px !important;
-  background-color: #424242 !important;
+  background: linear-gradient(10deg, #355c7d, #6c5b7b, #c06c84);
 }
 
 #nav-mobile li>a {

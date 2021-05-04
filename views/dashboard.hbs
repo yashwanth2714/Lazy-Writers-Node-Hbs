@@ -21,7 +21,7 @@
             <i class="fas fa-edit"></i>
           </a>
 
-          <form action="/stories/{{_id}}" method="post" id="delete-form">
+          <form action="/stories/{{_id}}" method="post" id="delete-form"  onsubmit="return deleteStory()">
             <input type="hidden" name="_method" value="DELETE">
             <button type="submit" class="btn red btn-custom">
               <i class="fas fa-trash"></i>
@@ -40,3 +40,10 @@
 <br/>
 <p id="noStories">If you have a story to tell, knowledge to share, or a perspective to offer — welcome home. It’s easy to post your thinking on any topic.</p>
 {{/if}}
+
+
+<script>
+    deleteStory = () => {
+        return confirm("Are you sure you want to delete this story? This action cannot be undone.");
+    }
+</script>
