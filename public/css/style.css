@@ -13,6 +13,7 @@ body {
 
 .custom-card-story a {
   color: white !important;
+  margin-right: auto !important;
 }
 
 .login-container {
