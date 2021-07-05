@@ -83,19 +83,19 @@ app.use(session({
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
-// resave - we don't want to save the session if ntng is modified
+// resave - we don't want to save the session if nothing is modified
 // saveUninitialized - don't create a session untill something is stored
 
 // Passport Middleware
 app.use(passport.initialize())
 app.use(passport.session())
-// inorder to work passport for sessions we need express-session and make sure to put that m/w above this passport session
+// We need express-session inorder to use passport sessions and make sure to put that m/w above this passport session
 
 // Set global var
 app.use(function (req, res, next) {
     res.locals.user = req.user || null
     next()
-    // with the authentication m/w we access req user 
+    // We access req user with the authentication m/w
     // setting global var to null if it doesn't exist
 })
 

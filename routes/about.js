@@ -109,12 +109,6 @@ router.post("/:id/avatar", ensureAuth, profileUpload.single('avatar'), async (re
     // }
     console.log(req.file);
     const buffer = await sharp(req.file.buffer).resize({ width: 256, height: 256 }).png().toBuffer()
-    // console.log(buffer);
-    // bufferStr = buffer.toString('base64');
-    // //console.log(bufferStr);
-    // newBuffer = Buffer.from(bufferStr, 'base64');
-    // console.log(Buffer.compare(newBuffer, buffer));
-    // console.log(Buffer.from(bufferStr, 'base64'));
     backURL = req.header('Referer') || '/profile';
     req.user.avatar = buffer;
     req.user.image = (req.protocol + '://' + req.get('host') + req.originalUrl);

@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const { ensureAuth } = require('../middleware/authProtector')
-const { findOne } = require('../models/Story')
 
 const Story = require('../models/Story')
 
@@ -17,7 +16,7 @@ router.get('/add', ensureAuth, (req, res) => {
 
 router.post('/', ensureAuth, async (req, res) => {
     try {
-        // we get the user data from req.user and saving this id in the user property which referes the owner of the stories
+        // We get the user data from req.user and saving the id in the user property which refers to the owner of the stories
         // req.body actually contains the form data from add route
         req.body.user = req.user.id
         await Story.create(req.body)

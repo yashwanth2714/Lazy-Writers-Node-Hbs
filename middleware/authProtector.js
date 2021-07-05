@@ -17,5 +17,5 @@ module.exports = {
             return next()
         }
     }
-    // if we logged in and try to go to the landing page, I don't want them to see the login
+    // We don't show the login page if the user is logged in
 }

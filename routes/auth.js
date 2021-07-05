@@ -33,6 +33,6 @@ router.get('/logout', (req, res) => {
 
     //res.redirect('/')
 })
-// with the password middleware once we login, we will have logout method on the req object
+// Once we login with the password middleware, we will have logout method on the req object
 
 module.exports = router
