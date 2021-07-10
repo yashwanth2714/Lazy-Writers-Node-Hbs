@@ -20,10 +20,12 @@ npm run dev
 #### `.env File Structure`
 
 ```bash
-MONGODB_URL = your mongodb uri
+MONGO_URI = your mongodb uri
 NODE_ENV =  'development'
 GOOGLE_CLIENT_ID = your google client id
 GOOGLE_CLIENT_SECRET = your google client secret
 ```
 
-Check the site here [Lazy Writers](https://lazy-writers.herokuapp.com/)
+## Show some :heart: and :star: the repo, if you like the project.
+
+[Live Demo](https://lazy-writers.herokuapp.com//)
