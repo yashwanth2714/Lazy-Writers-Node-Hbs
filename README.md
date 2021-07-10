@@ -28,4 +28,4 @@ GOOGLE_CLIENT_SECRET = your google client secret
 
 ## Show some :heart: and :star: the repo, if you like the project.
 
-[Live Demo](https://lazy-writers.herokuapp.com//)
+[Live Demo](https://lazy-writers.herokuapp.com/)
